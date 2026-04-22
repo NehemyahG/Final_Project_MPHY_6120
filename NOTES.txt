@@ -1,0 +1,2 @@
+Datasetes candidate:
+- Brain Cancer - MRI dataset: https://www.kaggle.com/datasets/orvile/brain-cancer-mri-dataset
