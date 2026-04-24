@@ -1,0 +1,4 @@
+How to interpret the comparison:
+- The baseline CNN is the sanity-check model.
+- ResNet18 from scratch shows whether deeper architecture alone helps.
+- ResNet18 pretrained is the main transfer-learning candidate and should usually win when the dataset is small.

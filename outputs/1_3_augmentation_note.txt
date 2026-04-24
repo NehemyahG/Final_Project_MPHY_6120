@@ -1,0 +1,4 @@
+Why augmentation matters in medical imaging:
+- It reduces overfitting when the dataset is small.
+- It teaches the model to ignore tiny acquisition differences that are not clinically meaningful.
+- It usually improves generalization more than training longer on a tiny fixed sample.
