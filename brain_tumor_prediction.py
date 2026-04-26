@@ -177,7 +177,6 @@ def build_transforms(train: bool) -> transforms.Compose:
     ])
     return transforms.Compose(ops)
 
-
 def estimate_patient_count(image_folder: ImageFolder) -> int:
     """Estimate unique patient/image IDs from the filename suffix.
 

@@ -1,0 +1,4 @@
+Why ImageNet pretraining helps:
+- Early layers already know how to detect edges, corners, blobs, and texture transitions.
+- Medical image datasets are often small, so starting from a pretrained model reduces the amount of data needed.
+- Fine-tuning lets the model adapt those generic features to tumor-specific patterns.

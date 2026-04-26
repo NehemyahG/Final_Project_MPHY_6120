@@ -26,6 +26,12 @@ From the repo root:
 python brain_tumor_prediction.py
 ```
 
+For a full-dataset run with separate artifacts:
+
+```powershell
+python brain_tumor_prediction_full.py
+```
+
 The script performs:
 1. Data audit + visualization
 2. Baseline CNN training
@@ -33,7 +39,9 @@ The script performs:
 4. Test evaluation and curves
 5. Interpretability (filters + Grad-CAM)
 
-Generated artifacts are written to `outputs/`.
+Generated artifacts are written to:
+- `outputs/` for subset/debug run (`brain_tumor_prediction.py`)
+- `outputs_full/` for full-data run (`brain_tumor_prediction_full.py`)
 
 ## Latest Full Run (Apr 24, 2026)
 

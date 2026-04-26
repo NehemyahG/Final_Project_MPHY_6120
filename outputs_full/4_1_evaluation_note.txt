@@ -1,0 +1,2 @@
+In a medical classification setting, recall is often the most important metric when missed cases are costly.
+For a 3-class tumor project, macro-F1 and the confusion matrix are also important because they show whether one tumor type is being ignored.
