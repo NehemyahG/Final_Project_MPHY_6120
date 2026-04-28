@@ -371,6 +371,8 @@ def main() -> None:
 
     # Part 1: data audit, visualization, and augmentation.
     train_loader, val_loader, test_loader, train_dataset, test_dataset, class_names = project.task_1_1_load_data()
+    
+    
     project.task_1_2_visualize_data(train_dataset, class_names)
     train_loader_aug = project.task_1_3_data_augmentation(train_dataset, class_names)
 
@@ -407,13 +409,16 @@ def main() -> None:
     project.task_3_3_compare_models(simple_cnn, resnet_scratch, resnet_pretrained, test_loader, class_names)
 
     # Part 4: test-set evaluation.
-    labels, probs, _ = project.task_4_1_confusion_matrix(resnet_pretrained, test_loader, class_names)
-    project.task_4_2_roc_pr_curves(labels, probs, class_names)
-    project.task_4_3_error_analysis(resnet_pretrained, test_dataset, class_names)
+    evaluated_model = "resnet_pretrained"  # Choose which model to evaluate on the test set.
+    labels, probs, _ = project.compute_confusion_matrix(resnet_pretrained, evaluated_model, test_loader, class_names)
+    project.test_roc_pr_curves(evaluated_model, labels, probs, class_names)
+    project.model_calibration_plot(evaluated_model, labels, probs, class_names)
+    project.error_analysis(resnet_pretrained, evaluated_model, test_dataset, class_names)
 
     # Part 5: interpretability.
-    project.task_5_1_visualize_filters(simple_cnn)
+    project.visualize_filters(evaluated_model, resnet_pretrained)
     task_5_2_gradcam_variants_with_mask_check(resnet_pretrained, test_dataset, class_names)
+    project.task_5_3_occlusion_sensitivity(resnet_pretrained, evaluated_model, test_dataset, class_names)
 
     print("\n" + "=" * 60)
     print("FULL DATASET RUN COMPLETE")

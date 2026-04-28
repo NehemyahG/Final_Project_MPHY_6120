@@ -37,6 +37,7 @@ from sklearn.metrics import (
     accuracy_score,
     auc,
     average_precision_score,
+    brier_score_loss,
     classification_report,
     confusion_matrix,
     f1_score,
@@ -48,6 +49,7 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import label_binarize
+from sklearn.calibration import calibration_curve
 from torch.utils.data import DataLoader, Subset
 from torchvision import models
 from torchvision.datasets import ImageFolder
@@ -679,7 +681,7 @@ def task_2_2_training_loop(
     model: nn.Module,
     train_loader: DataLoader,
     val_loader: DataLoader,
-    epochs: int = 8,
+    epochs: int = 8, #epochs: int = 8
     learning_rate: float = 1e-3,
 ) -> Tuple[nn.Module, Dict[str, List[float]]]:
     """Train the baseline CNN on the augmented training split."""
@@ -784,14 +786,14 @@ def task_3_2_fine_tuning(
     for param in model.fc.parameters():
         param.requires_grad = True
 
-    stage1_history = train_model(model, train_loader, val_loader, epochs=4, learning_rate=1e-3, patience=3)[1]
+    stage1_history = train_model(model, train_loader, val_loader, epochs=4, learning_rate=1e-3, patience=3)[1] #epochs = 4
 
     # Stage 2: unfreeze the full model and fine-tune with a smaller learning rate.
     print("\nStage 2: Fine-tuning the full model")
     for param in model.parameters():
         param.requires_grad = True
 
-    stage2_model, stage2_history = train_model(model, train_loader, val_loader, epochs=6, learning_rate=1e-4, patience=3)
+    stage2_model, stage2_history = train_model(model, train_loader, val_loader, epochs=6, learning_rate=1e-4, patience=3) #epochs = 6
 
     history = {
         "train_loss": stage1_history["train_loss"] + stage2_history["train_loss"],
@@ -879,8 +881,9 @@ def task_3_3_compare_models(
 # Part 4: Model Evaluation
 # =============================================================================
 
-def task_4_1_confusion_matrix(
+def compute_confusion_matrix(
     model: nn.Module,
+    model_name: str,
     test_loader: DataLoader,
     class_names: Sequence[str],
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
@@ -902,16 +905,16 @@ def task_4_1_confusion_matrix(
     plt.yticks(ticks=np.arange(len(class_names)), labels=[to_display_name(c) for c in class_names])
     plt.xlabel("Predicted label")
     plt.ylabel("True label")
-    plt.title("Confusion Matrix")
+    plt.title(f"{model_name} : Confusion Matrix")
 
     for i in range(cm.shape[0]):
         for j in range(cm.shape[1]):
             plt.text(j, i, cm[i, j], ha="center", va="center", color="black")
 
     plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "4_1_confusion_matrix.png", dpi=150, bbox_inches="tight")
+    plt.savefig(OUTPUT_DIR / f"4_1_confusion_matrix_{model_name}.png", dpi=150, bbox_inches="tight")
     plt.close()
-    print("Saved: outputs/4_1_confusion_matrix.png")
+    print(f"Saved: outputs/4_1_confusion_matrix_{model_name}.png")
 
     print("\nClassification Report")
     print(classification_report(y_true, y_pred, target_names=[to_display_name(c) for c in class_names], zero_division=0))
@@ -926,12 +929,45 @@ def task_4_1_confusion_matrix(
 
     return y_true, y_prob, y_pred
 
-
-def task_4_2_roc_pr_curves(
+def model_calibration_plot(
+    model_name: str,
     labels: np.ndarray,
     probs: np.ndarray,
     class_names: Sequence[str],
 ) -> None:
+    """Plot reliability diagrams to check if predicted probabilities are well-calibrated."""
+    print("\n" + "=" * 60)
+    print("Exercise 4.2: Model Calibration")
+    print("=" * 60)
+
+    n_classes = len(class_names)
+    y_true_bin = label_binarize(labels, classes=list(range(n_classes)))
+
+    brier_log = brier_score_loss(y_true_bin.ravel(), probs.ravel())
+    print(f"Brier score loss: {brier_log:.4f}")
+    
+    plt.figure(figsize=(6, 6))
+    for class_id in range(n_classes):
+        prob_true, prob_pred = calibration_curve(y_true_bin[:, class_id], probs[:, class_id], n_bins=5)
+        plt.plot(prob_pred, prob_true, marker="o", label=to_display_name(class_names[class_id]))
+        
+    plt.plot([0, 1], [0, 1], "k--", alpha=0.5)
+    plt.xlabel("Mean Predicted Probability")
+    plt.ylabel("Fraction of Positives")
+    plt.title(f"{model_name}: Calibration Curves ({brier_log:.4f} Brier Loss)")
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(OUTPUT_DIR / f"4_2_calibration_curves_{model_name}.png", dpi=150, bbox_inches="tight") # Include model used on the file name
+    plt.close()
+    print(f"Saved: outputs/4_2_calibration_curves_{model_name}.png")
+    
+    
+def test_roc_pr_curves(
+    model_name: str,
+    labels: np.ndarray,
+    probs: np.ndarray,
+    class_names: Sequence[str]
+    ) -> None:
     """Plot ROC and precision-recall curves using one-vs-rest targets."""
     print("\n" + "=" * 60)
     print("Exercise 4.2: ROC and PR Curves")
@@ -954,7 +990,7 @@ def task_4_2_roc_pr_curves(
     axes[0].plot([0, 1], [0, 1], "k--", alpha=0.5)
     axes[0].set_xlabel("False Positive Rate")
     axes[0].set_ylabel("True Positive Rate")
-    axes[0].set_title("ROC Curves")
+    axes[0].set_title(f"{model_name}: ROC Curves")
     axes[0].legend(fontsize=8)
 
     # Precision-recall curves
@@ -968,17 +1004,18 @@ def task_4_2_roc_pr_curves(
     axes[1].plot(recall_micro, precision_micro, linestyle="--", color="black", label=f"Micro-average (AP={ap_micro:.3f})")
     axes[1].set_xlabel("Recall")
     axes[1].set_ylabel("Precision")
-    axes[1].set_title("Precision-Recall Curves")
+    axes[1].set_title(f"{model_name}: Precision-Recall Curves")
     axes[1].legend(fontsize=8)
 
     plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "4_2_roc_pr_curves.png", dpi=150, bbox_inches="tight")
+    plt.savefig(OUTPUT_DIR / f"4_2_roc_pr_curves_{model_name}.png", dpi=150, bbox_inches="tight")
     plt.close()
-    print("Saved: outputs/4_2_roc_pr_curves.png")
+    print(f"Saved: outputs/4_2_roc_pr_curves_{model_name}.png")
 
 
-def task_4_3_error_analysis(
+def error_analysis(
     model: nn.Module,
+    model_name: str,
     test_dataset: Subset,
     class_names: Sequence[str],
 ) -> None:
@@ -1016,7 +1053,7 @@ def task_4_3_error_analysis(
                 break
 
     fig, axes = plt.subplots(2, 4, figsize=(16, 8))
-    fig.suptitle("Error Analysis: Correct vs Misclassified Examples")
+    fig.suptitle(f"{model_name} Error Analysis: Correct vs Misclassified Examples")
 
     def plot_example(ax, item: Tuple[torch.Tensor, int, int, float]) -> None:
         image, true_label, pred_label, confidence = item
@@ -1042,16 +1079,16 @@ def task_4_3_error_analysis(
     axes[0, 0].set_ylabel("Correct", fontsize=12)
     axes[1, 0].set_ylabel("Misclassified", fontsize=12)
     plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "4_3_error_analysis.png", dpi=150, bbox_inches="tight")
+    plt.savefig(OUTPUT_DIR / f"4_3_error_analysis_{model_name}.png", dpi=150, bbox_inches="tight")
     plt.close()
-    print("Saved: outputs/4_3_error_analysis.png")
+    print(f"Saved: outputs/4_3_error_analysis_{model_name}.png")
 
 
 # =============================================================================
 # Part 5: Interpretability
 # =============================================================================
 
-def task_5_1_visualize_filters(model: nn.Module) -> None:
+def visualize_filters(model_name: str, model: nn.Module) -> None:
     """Visualize the first convolutional filters learned by the model."""
     print("\n" + "=" * 60)
     print("Exercise 5.1: Visualize Filters")
@@ -1080,11 +1117,11 @@ def task_5_1_visualize_filters(model: nn.Module) -> None:
         ax.imshow(filter_img, cmap="gray")
         ax.axis("off")
 
-    plt.suptitle("Learned Filters from the First Convolutional Layer")
+    plt.suptitle(f"{model_name} Learned Filters from the First Convolutional Layer")
     plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "5_1_filters.png", dpi=150, bbox_inches="tight")
+    plt.savefig(OUTPUT_DIR / f"5_1_{model_name}_filters.png", dpi=150, bbox_inches="tight")
     plt.close()
-    print("Saved: outputs/5_1_filters.png")
+    print(f"Saved: outputs/5_1_{model_name}_filters.png")
 
 
 def get_gradcam_target_layer(model: nn.Module) -> nn.Module:
@@ -1154,6 +1191,92 @@ def task_5_2_gradcam(model: nn.Module, test_dataset: Subset, class_names: Sequen
     plt.savefig(OUTPUT_DIR / "5_2_gradcam.png", dpi=150, bbox_inches="tight")
     plt.close()
     print("Saved: outputs/5_2_gradcam.png")
+    
+def task_5_3_occlusion_sensitivity(
+    model: nn.Module,
+    model_name: str,
+    test_dataset: Subset,
+    class_names: Sequence[str],
+    patch_size: int = 16,
+    stride: int = 8,
+    num_examples: int = 3) -> None:
+    """Occlusion sensitivity: mask image patches and measure drop in confidence."""
+    print("\n" + "=" * 60)
+    print("Exercise 5.3: Occlusion Sensitivity")
+    print("=" * 60)
+
+    model = model.to(device)
+    model.eval()
+
+    fig, axes = plt.subplots(3, num_examples, figsize=(14, 10))
+    fig.suptitle(f"{model_name}: Occlusion Sensitivity", fontsize=16)
+
+    shown = 0
+
+    for idx in range(len(test_dataset)):
+        img, label = test_dataset[idx]
+        input_tensor = img.unsqueeze(0).to(device)
+
+        with torch.no_grad():
+            logits = model(input_tensor)
+            probs = torch.softmax(logits, dim=1)
+            pred_class = int(probs.argmax(dim=1).item())
+            original_prob = float(probs[0, pred_class].item())
+
+        _, h, w = img.shape
+        sensitivity_map = np.zeros((h, w), dtype=np.float32)
+        count_map = np.zeros((h, w), dtype=np.float32)
+
+        for y in range(0, h - patch_size + 1, stride):
+            for x in range(0, w - patch_size + 1, stride):
+                occluded = input_tensor.clone()
+
+                # Since images are normalized to [-1, 1], value 0 means neutral gray.
+                occluded[:, :, y:y + patch_size, x:x + patch_size] = 0.0
+
+                with torch.no_grad():
+                    occluded_logits = model(occluded)
+                    occluded_probs = torch.softmax(occluded_logits, dim=1)
+                    occluded_prob = float(occluded_probs[0, pred_class].item())
+
+                confidence_drop = original_prob - occluded_prob
+
+                sensitivity_map[y:y + patch_size, x:x + patch_size] += confidence_drop
+                count_map[y:y + patch_size, x:x + patch_size] += 1
+
+        sensitivity_map = sensitivity_map / np.maximum(count_map, 1e-8)
+
+        # Normalize for display
+        sensitivity_map = sensitivity_map - sensitivity_map.min()
+        sensitivity_map = sensitivity_map / max(sensitivity_map.max(), 1e-8)
+
+        img_display = denormalize_tensor(img).squeeze().cpu().numpy()
+
+        axes[0, shown].imshow(img_display, cmap="gray")
+        axes[0, shown].set_title(f"True: {to_display_name(class_names[int(label)])}")
+        axes[0, shown].axis("off")
+
+        axes[1, shown].imshow(sensitivity_map, cmap="hot")
+        axes[1, shown].set_title("Occlusion Sensitivity")
+        axes[1, shown].axis("off")
+
+        axes[2, shown].imshow(img_display, cmap="gray")
+        axes[2, shown].imshow(sensitivity_map, cmap="hot", alpha=0.45)
+        axes[2, shown].set_title(
+            f"Pred: {to_display_name(class_names[pred_class])}\n"
+            f"Confidence: {original_prob:.2f}"
+        )
+        axes[2, shown].axis("off")
+
+        shown += 1
+        if shown >= num_examples:
+            break
+
+    plt.tight_layout(rect=[0, 0, 1, 0.95])
+    plt.savefig(OUTPUT_DIR / f"5_3_occlusion_sensitivity_{model_name}.png", dpi=150, bbox_inches="tight")
+    plt.close()
+
+    print(f"Saved: outputs/5_3_occlusion_sensitivity_{model_name}.png")
 
 
 # =============================================================================
@@ -1175,7 +1298,7 @@ if __name__ == "__main__":
     # Part 2: baseline CNN.
     simple_cnn = SimpleCNN(num_classes=len(class_names)).to(device)
     print(f"\nSimpleCNN architecture:\n{simple_cnn}")
-    simple_cnn, simple_history = task_2_2_training_loop(simple_cnn, train_loader_aug, val_loader, epochs=8, learning_rate=1e-3)
+    simple_cnn, simple_history = task_2_2_training_loop(simple_cnn, train_loader_aug, val_loader, epochs=8, learning_rate=1e-3) #epochs = 8 
     task_2_3_training_curves(simple_history, model_name="Simple CNN")
 
     # Part 3: transfer learning with ResNet18.
@@ -1186,20 +1309,25 @@ if __name__ == "__main__":
 
     # A scratch ResNet gives a fair transfer-learning comparison.
     resnet_scratch = build_resnet18_for_grayscale(num_classes=len(class_names), pretrained=False)
-    resnet_scratch, scratch_history = train_model(resnet_scratch, train_loader_aug, val_loader, epochs=6, learning_rate=1e-3)
+    resnet_scratch, scratch_history = train_model(resnet_scratch, train_loader_aug, val_loader, epochs=6, learning_rate=1e-3) #epochs = 6
     plot_training_curves(scratch_history, "ResNet18 Scratch", "3_2_scratch_training_curves.png")
     print("Saved: outputs/3_2_scratch_training_curves.png")
 
     task_3_3_compare_models(simple_cnn, resnet_scratch, resnet_pretrained, test_loader, class_names)
 
     # Part 4: test-set evaluation.
-    labels, probs, preds = task_4_1_confusion_matrix(resnet_pretrained, test_loader, class_names)
-    task_4_2_roc_pr_curves(labels, probs, class_names)
-    task_4_3_error_analysis(resnet_pretrained, test_dataset, class_names)
+    evaluated_model = "resnet_pretrained"  # Choose which model to evaluate on the test set.
+    labels, probs, _ = compute_confusion_matrix(resnet_pretrained, evaluated_model, test_loader, class_names)
+    test_roc_pr_curves(evaluated_model, labels, probs, class_names)
+    model_calibration_plot(evaluated_model, labels, probs, class_names)
+    error_analysis(resnet_pretrained, evaluated_model, test_dataset, class_names)
 
     # Part 5: interpretability.
-    task_5_1_visualize_filters(simple_cnn)
+    visualize_filters(evaluated_model, resnet_pretrained)
     task_5_2_gradcam(resnet_pretrained, test_dataset, class_names)
+
+
+    task_5_3_occlusion_sensitivity(resnet_pretrained, evaluated_model, test_dataset, class_names)
 
     print("\n" + "=" * 60)
     print("FINAL PROJECT COMPLETE")
