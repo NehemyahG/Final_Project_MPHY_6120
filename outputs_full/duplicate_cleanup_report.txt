@@ -1,0 +1,127 @@
+Dataset root: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer
+Dry run: False
+Total image files scanned: 6056
+Duplicate groups found: 36
+Files removed: 44
+Files kept: 6012
+
+Duplicates removed per folder:
+- brain_tumor: 44
+
+Duplicate groups:
+1. Hash: 31cdb53ccbc08d1ad8df78f53d70342bd63bbfb96c10c78b101c59ce35206ba1
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0013 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0013.jpg
+2. Hash: 8874bd8ea7e6a3034d154156b1464f4ab4d8510f75c0df39289b1faa56b03f69
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0014 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0014.jpg
+3. Hash: db09b0cd83e1908aad3f8e7ab29ec939d315f400c164a00e658102c1a23500ad
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0015 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0015.jpg
+4. Hash: 7c34ee6a688ac0ea1a804cca9e6d7e1c51ab694f4f0f6aac34ca2d2b7f68471c
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0016 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0016.jpg
+5. Hash: a15ed5db728331d970dab2ffb344a99ccd2cad95fa7693f2a951d23f1c79f209
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0017 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0017.jpg
+6. Hash: 16c8371f297f73ec90ffd4861d81dac33bcdb8a7b697a98f08b3094aaaa2e519
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0018 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0018.jpg
+7. Hash: 121bcb9349d49b92a71b862c0ba0ecc7365c041166ff497a334f492d9158b245
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0019 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0019.jpg
+8. Hash: 51f41fccae28cb334aeb1b5bb00a0aea0c885d9e3cfeb85844add4a06f5d4d4d
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0020 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0020.jpg
+9. Hash: 561e16c41364be070dbb4483abc232df6466d20a8bab4bc70d51658ac05c6b7c
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0021 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0021.jpg
+10. Hash: 2d7427191e326e8f75951af3fb73d397175f10da77d86c60c660d805c6045233
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0022 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0022.jpg
+11. Hash: 64eaaff67d86f419a9dc9b4038b14fa87ac8c10029a1a51e3688cf739b3bbbf9
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0023 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0023.jpg
+12. Hash: ebbdbb562f6f478d14ca6f455b1d5c14aba25a26c6cc1da67c8708b499992025
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0024 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0024.jpg
+13. Hash: 374149359b108a73d1350cdf629962b79de1d3d404c54cc567013abd0a3cfbdd
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0025 - Copy (2).jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0025 - Copy - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0025 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0025.jpg
+14. Hash: 518243de8c19a930b966f7341289b9927bcc285b522e7e8c3dc8d13a6d41407b
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0026 - Copy (2).jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0026 - Copy - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0026 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0026.jpg
+15. Hash: 183867aa61bedbafcbd76ecda92ff4fc2ba8b1a89fcdecc8ae0ef31ff22ed74c
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0027 - Copy (2).jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0027 - Copy - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0027 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0027.jpg
+16. Hash: fa1705d8d9827dd56151141fd156b56388cb54d3e8dc086d728e677850e35bdf
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0028 - Copy (2).jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0028 - Copy - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0028 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0028.jpg
+17. Hash: 6371a8abfc9c8587c189f9183f80eefec0d6f8a01774cbe5771603d5faec685d
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0029 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0029.jpg
+18. Hash: 9ee7ba6ec5685e4cb5182ec508e46f1a6e2e23ab835ee21581e3451ebe58c216
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0030 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0030.jpg
+19. Hash: e4edc6a25b8e7bc6f334a0bd7f48499c0f8e44b3a35619ac526dad0e32d839d2
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0031 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0031.jpg
+20. Hash: 0a64d9c1fae848c9d0b8e1dd2f6a58128138aedd20422daf7f612b2a20476d03
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0032 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0032.jpg
+21. Hash: 206cb8108021023d6d840ea272645932b7aad24e7eef7d15d1865ddfc1107f44
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0033 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0033.jpg
+22. Hash: 9a8885437900513e47c4ea328eaaebf93af6a4441f67ac621a43817a8f7f0b40
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0034 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0034.jpg
+23. Hash: e9a4a3366614da892f0ba7c3e6e3ddea1ff4ffc4dbe2726466755751f84adf1c
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0035 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0035.jpg
+24. Hash: 1b9295976ff55c92841a08ec02438d0bdd150f1b77617146b9fe57923cbc6a5a
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0036 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0036.jpg
+25. Hash: a1d59b1f6dcc609a1ac212a3f7780deffaa23c3c08a39c9ecc90d320017a1a68
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0037 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0037.jpg
+26. Hash: 0c4c95aff5e698d444a1621cb2832a68f3b5e37e7e5dc4b445e5b2183392c9cb
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0038 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0038.jpg
+27. Hash: 0f1a86e412c5b5f4c33967f7d0340671393e3647a13396bb3d0d0839cb64d5d4
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0039 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0039.jpg
+28. Hash: 408e6f6851c2deeece6ba8ca109679a226f118ff26c69c48883868559afb23b7
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0040 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0040.jpg
+29. Hash: e658b815433686e659658081f043efaec79cfb54f63c80ecd5b8984098ffaaa4
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0041 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0041.jpg
+30. Hash: 183234c9741462a6ac42a0d367c8c64e084d63d0c55c32a21644e5209b3902ec
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0042 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0042.jpg
+31. Hash: d640232e183e9b21fb637d6830a0d8625e2bcbaf2aa5769c17bbddde716d5d40
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0043 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0043.jpg
+32. Hash: d702c59f2d7b1d64a912aa9bdd4e956d9f1abfa997b79c37b9736316072e43b5
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0044 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0044.jpg
+33. Hash: c503a7346a6778877fd476ae341417d2f3c87103bde5a69e9a497bf4b510092f
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0045 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0045.jpg
+34. Hash: 7cee827a92ba9306b68ce16c01d7f4ed8b6402ec86c084a7417b9387dd22d92e
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0046 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0046.jpg
+35. Hash: ffdd4fcb4927ae3fc4268ae173973050e6837ab0c849ad34c7715d4f676fd6e5
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0047 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0047.jpg
+36. Hash: eea35712a55c811fead780a92b871417e05770012e4c0e71c1946172c84b75ec
+   Kept: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0048 - Copy.jpg
+   Removed: C:\Users\nehem\OneDrive\Documents\GitHub\Final_Project_MPHY_6120\Brain_Cancer raw MRI data\Brain_Cancer\brain_tumor\brain_tumor_0048.jpg
