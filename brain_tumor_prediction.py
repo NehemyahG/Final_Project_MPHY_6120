@@ -793,7 +793,7 @@ def task_3_2_fine_tuning(
     for param in model.parameters():
         param.requires_grad = True
 
-    stage2_model, stage2_history = train_model(model, train_loader, val_loader, epochs=6, learning_rate=1e-4, patience=3) #epochs = 6
+    stage2_model, stage2_history = train_model(model, train_loader, val_loader, epochs=6, learning_rate=1e-4, patience=3)
 
     history = {
         "train_loss": stage1_history["train_loss"] + stage2_history["train_loss"],
@@ -1134,7 +1134,7 @@ def get_gradcam_target_layer(model: nn.Module) -> nn.Module:
     raise TypeError("Unsupported model type for Grad-CAM")
 
 
-def task_5_2_gradcam(model: nn.Module, test_dataset: Subset, class_names: Sequence[str]) -> None:
+def task_5_2_gradcam(model_name: str, model: nn.Module, test_dataset: Subset, class_names: Sequence[str]) -> None:
     """Generate Grad-CAM heatmaps for a few test images."""
     print("\n" + "=" * 60)
     print("Exercise 5.2: Grad-CAM Visualization")
@@ -1188,9 +1188,9 @@ def task_5_2_gradcam(model: nn.Module, test_dataset: Subset, class_names: Sequen
                 break
 
     plt.tight_layout(rect=[0, 0, 1, 0.95])
-    plt.savefig(OUTPUT_DIR / "5_2_gradcam.png", dpi=150, bbox_inches="tight")
+    plt.savefig(OUTPUT_DIR / f"5_2_gradcam_{model_name}.png", dpi=150, bbox_inches="tight")
     plt.close()
-    print("Saved: outputs/5_2_gradcam.png")
+    print(f"Saved: outputs/5_2_gradcam_{model_name}.png")
     
 def task_5_3_occlusion_sensitivity(
     model: nn.Module,
@@ -1324,10 +1324,32 @@ if __name__ == "__main__":
 
     # Part 5: interpretability.
     visualize_filters(evaluated_model, resnet_pretrained)
-    task_5_2_gradcam(resnet_pretrained, test_dataset, class_names)
+    task_5_2_gradcam(evaluated_model, resnet_pretrained, test_dataset, class_names)
 
 
     task_5_3_occlusion_sensitivity(resnet_pretrained, evaluated_model, test_dataset, class_names)
+    
+    
+    # Test the resnet_pretrained model on the brain_tumor_2 dataset
+    # Load the brain_tumor_2 dataset
+    brain_tumor_2_test_dataset = ImageFolder(
+        root=PROJECT_ROOT / "brain_tumor_2",
+        transform=build_transforms(train=False)
+    )
+
+    # Create the DataLoader for the test dataset
+    brain_tumor_2_test_loader = DataLoader(brain_tumor_2_test_dataset, batch_size=32, shuffle=False)
+
+    # Evaluate the model on the brain_tumor_2 dataset
+    labels2, probs2, _ = compute_confusion_matrix(resnet_pretrained, "resnet_pretrained_dataset2", brain_tumor_2_test_loader, class_names)
+    test_roc_pr_curves("resnet_pretrained_dataset2", labels2, probs2, class_names)
+    model_calibration_plot("resnet_pretrained_dataset2", labels2, probs2, class_names)
+    error_analysis(resnet_pretrained, "resnet_pretrained_dataset2", brain_tumor_2_test_dataset, class_names)
+
+    # Visualize filters and Grad-CAM for the brain_tumor_2 dataset
+    visualize_filters("resnet_pretrained_dataset2", resnet_pretrained)
+    task_5_2_gradcam("resnet_pretrained_dataset2", resnet_pretrained, brain_tumor_2_test_dataset, class_names)
+    task_5_3_occlusion_sensitivity(resnet_pretrained, "resnet_pretrained_dataset2", brain_tumor_2_test_dataset, class_names)
 
     print("\n" + "=" * 60)
     print("FINAL PROJECT COMPLETE")

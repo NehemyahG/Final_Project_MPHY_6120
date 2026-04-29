@@ -228,6 +228,7 @@ def compute_overlap_metrics(mask_bin: np.ndarray, cam_bin: np.ndarray) -> Tuple[
 
 
 def task_5_2_gradcam_variants_with_mask_check(
+    model_name: str,
     model: torch.nn.Module,
     test_dataset: Subset,
     class_names: Sequence[str],
@@ -341,12 +342,12 @@ def task_5_2_gradcam_variants_with_mask_check(
         overlap_lines.append("Mean Dice: n/a (no matched masks)")
 
     plt.tight_layout(rect=[0, 0, 1, 0.95])
-    plt.savefig(project.OUTPUT_DIR / "5_2_gradcam_comparison.png", dpi=150, bbox_inches="tight")
+    plt.savefig(project.OUTPUT_DIR / f"5_2_{model_name}_gradcam_comparison.png", dpi=150, bbox_inches="tight")
     plt.close()
-    print("Saved: outputs_full/5_2_gradcam_comparison.png")
+    print(f"Saved: outputs_full/5_2_{model_name}_gradcam_comparison.png")
 
-    project.save_text_summary("5_2_mask_overlap_report.txt", overlap_lines)
-    print("Saved: outputs_full/5_2_mask_overlap_report.txt")
+    project.save_text_summary(f"5_2_{model_name}_mask_overlap_report.txt", overlap_lines)
+    print(f"Saved: outputs_full/5_2_{model_name}_mask_overlap_report.txt")
 
 
 def main() -> None:
@@ -383,7 +384,7 @@ def main() -> None:
         simple_cnn,
         train_loader_aug,
         val_loader,
-        epochs=8,
+        epochs=8, #epochs = 8 --- IGNORE ---
         learning_rate=1e-3,
     )
     project.task_2_3_training_curves(simple_history, model_name="Simple CNN")
@@ -400,7 +401,7 @@ def main() -> None:
         resnet_scratch,
         train_loader_aug,
         val_loader,
-        epochs=6,
+        epochs=6, #epochs = 6
         learning_rate=1e-3,
     )
     project.plot_training_curves(scratch_history, "ResNet18 Scratch", "3_2_scratch_training_curves.png")
@@ -417,9 +418,39 @@ def main() -> None:
 
     # Part 5: interpretability.
     project.visualize_filters(evaluated_model, resnet_pretrained)
-    task_5_2_gradcam_variants_with_mask_check(resnet_pretrained, test_dataset, class_names)
+    task_5_2_gradcam_variants_with_mask_check(evaluated_model, resnet_pretrained, test_dataset, class_names)
     project.task_5_3_occlusion_sensitivity(resnet_pretrained, evaluated_model, test_dataset, class_names)
 
+    
+    
+    # Test the resnet_pretrained model on the brain_tumor_2 dataset
+    # Load the brain_tumor_2 dataset
+    brain_tumor_2_test_dataset = Subset(
+    ImageFolder(
+        root=project.PROJECT_ROOT / "brain_tumor_2",
+        transform=build_transforms_full(train=False)
+    ),
+    indices=list(range(len(ImageFolder(
+        root=project.PROJECT_ROOT / "brain_tumor_2",
+        transform=build_transforms_full(train=False)
+    ))))
+)
+
+    # Create the DataLoader for the test dataset
+    brain_tumor_2_test_loader = DataLoader(brain_tumor_2_test_dataset, batch_size=32, shuffle=False)
+
+    # Evaluate the model on the brain_tumor_2 dataset
+    labels2, probs2, _ = project.compute_confusion_matrix(resnet_pretrained, "resnet_pretrained_dataset2", brain_tumor_2_test_loader, class_names)
+    project.test_roc_pr_curves("resnet_pretrained_dataset2", labels2, probs2, class_names)
+    project.model_calibration_plot("resnet_pretrained_dataset2", labels2, probs2, class_names)
+    project.error_analysis(resnet_pretrained, "resnet_pretrained_dataset2", brain_tumor_2_test_dataset, class_names)
+
+    # Visualize filters and Grad-CAM for the brain_tumor_2 dataset
+    project.visualize_filters("resnet_pretrained_dataset2", resnet_pretrained)
+    task_5_2_gradcam_variants_with_mask_check("resnet_pretrained_dataset2", resnet_pretrained, brain_tumor_2_test_dataset, class_names)
+    project.task_5_3_occlusion_sensitivity(resnet_pretrained, "resnet_pretrained_dataset2", brain_tumor_2_test_dataset, class_names)
+    
+    
     print("\n" + "=" * 60)
     print("FULL DATASET RUN COMPLETE")
     print("=" * 60)
