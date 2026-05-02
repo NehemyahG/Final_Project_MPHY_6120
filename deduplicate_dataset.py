@@ -15,7 +15,7 @@ from typing import DefaultDict, Dict, List, Sequence, Tuple
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent
-DATA_ROOT = PROJECT_ROOT / "Brain_Cancer raw MRI data" / "Brain_Cancer"
+DATA_ROOT = PROJECT_ROOT / "brain_tumor_2" # "Brain_Cancer raw MRI data" / "Brain_Cancer"
 REPORT_PATH = PROJECT_ROOT / "outputs_full" / "duplicate_cleanup_report.txt"
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff"}
