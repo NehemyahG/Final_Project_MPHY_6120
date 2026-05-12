@@ -427,11 +427,11 @@ def main() -> None:
     # Load the brain_tumor_2 dataset
     brain_tumor_2_test_dataset = Subset(
     ImageFolder(
-        root=project.PROJECT_ROOT / "brain_tumor_2",
+        root=project.PROJECT_ROOT / "data/brain_tumor_2",
         transform=build_transforms_full(train=False)
     ),
     indices=list(range(len(ImageFolder(
-        root=project.PROJECT_ROOT / "brain_tumor_2",
+        root=project.PROJECT_ROOT / "data/brain_tumor_2",
         transform=build_transforms_full(train=False)
     ))))
 )

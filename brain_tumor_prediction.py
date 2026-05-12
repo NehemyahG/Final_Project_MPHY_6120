@@ -60,7 +60,7 @@ from torchvision.datasets import ImageFolder
 # =============================================================================
 
 PROJECT_ROOT = Path(__file__).resolve().parent
-DATA_ROOT = PROJECT_ROOT / "Brain_Cancer raw MRI data" / "Brain_Cancer"
+DATA_ROOT = PROJECT_ROOT / "data/Brain_Cancer raw MRI data" / "Brain_Cancer"
 OUTPUT_DIR = PROJECT_ROOT / "outputs"
 
 # Start small, validate the pipeline, then increase to 1.0 for the full dataset.
@@ -1333,7 +1333,7 @@ if __name__ == "__main__":
     # Test the resnet_pretrained model on the brain_tumor_2 dataset
     # Load the brain_tumor_2 dataset
     brain_tumor_2_test_dataset = ImageFolder(
-        root=PROJECT_ROOT / "brain_tumor_2",
+        root=PROJECT_ROOT / "data/brain_tumor_2",
         transform=build_transforms(train=False)
     )
 
