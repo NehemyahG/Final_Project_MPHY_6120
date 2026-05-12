@@ -1,0 +1,4 @@
+How to read the curves:
+- If training loss keeps dropping while validation loss flattens or rises, the model is starting to overfit.
+- A small gap between training and validation is normal; a large gap means the model is memorizing instead of learning general patterns.
+- This is one reason to begin with a small subset first and confirm the pipeline before scaling up.

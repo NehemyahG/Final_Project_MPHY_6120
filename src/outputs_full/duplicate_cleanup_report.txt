@@ -1,0 +1,215 @@
+Dataset root: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2
+Dry run: False
+Total image files scanned: 5648
+Duplicate groups found: 64
+Files removed: 74
+Files kept: 5574
+
+Duplicates removed per folder:
+- brain_glioma: 14
+- brain_menin: 16
+- brain_tumor: 44
+
+Duplicate groups:
+1. Hash: 917cadd5aad4a8288a4f759d4f4a261e66c3187dbace1293b76aa8434b691b37
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_129.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_303.jpg
+2. Hash: 75a94d8802948910edc24b520257853ad379e8be91af1393bd6b5092b23e05b1
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_140.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_238.jpg
+3. Hash: 8854fba4d018533127553c10ffebacf8d730192cb6f07d957ea5d3fb48421eea
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_143.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_72.jpg
+4. Hash: 9240553fcd8fe826ed548984db69d2d0178a14adb7aba345b6e7ba539e15d71f
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_144.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_59.jpg
+5. Hash: c3e0dfa4276ce9ec6db117fa83397c51ba751c0031b7ee044b682e34b5a82100
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_166.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_278.jpg
+6. Hash: 36d2f03fd5b0ffd8a3ac1d2fe9f2c3cf4967f82751629676198f774e0ee21a9c
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_170.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_178.jpg
+7. Hash: 177abe5e79819aaca240e172e350d26a7b6e4d12c1c4c9f5a16c6cbb2e2a650d
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_171.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_228.jpg
+8. Hash: 192cb19f45e0c2f320174ae32077f828514d07d101a3042b1064776e6bc28cd6
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_177.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_36.jpg
+9. Hash: 9c20281ccdd53888d2ebcecc9c71521ed2431500eb4448e1b63465c050a0e59f
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_204.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_259.jpg
+10. Hash: c711a606ec66e74a2bbe5721727a3deeb2fd9e4b20aa50c99afd65d7dea42541
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_212.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_272.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_338.jpg
+11. Hash: c2bd43b2b8cdb63dc5b6d86fa972dbc4d8395278a5e7fac7f1c972f01921a206
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_270.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_29.jpg
+12. Hash: 8872585c004347ea73fad063e407998e62786cc8d7a0938ad85792f19a55eb0a
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_299.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_364.jpg
+13. Hash: 04aa41d8514362877d7f8fd81e543bc8584e4a6ba1ac025c2f37515f32abd9b0
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_32.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_glioma/Te-gl_389.jpg
+14. Hash: 86847c6a4729a4b19bf1b3f58905c68812c6f75ea680c0ccb1621b94e165d16f
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Te-me_116.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Te-me_235.jpg
+15. Hash: f55311fb8ccf1b86450233262bd00b176bd1c404e5849b59c0a3cd5e4440626b
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Te-me_179.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Te-me_198.jpg
+16. Hash: 0f673459b5dba7f9dab9a6a32309e2c89ddf4bb9b799d3350f56c33e8cc8b2d3
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-aug-me_89.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_889.jpg
+17. Hash: e50960c499e99a17df350e4f261d140bb10d74d9a3d81d91c4878542e2b32538
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-aug-me_90.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_1242.jpg
+18. Hash: 5c32bc4af148302670ffb8a5aa58fc239cea60fbbfc08ba34a65230a0de6f6f4
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-aug-me_91.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_245.jpg
+19. Hash: 8f9c305ee1ad7c0f9e616d2f95e5536f5858b575e81d7a56e98b574bb8a20666
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-aug-me_92.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_268.jpg
+20. Hash: b8a72a6ed1229b7b33dc11c8641ebf15e55e9db20fd933e6372234013b8707b8
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-aug-me_94.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_824.jpg
+21. Hash: ef0e11d139ea444dbd4e266a8ccd3f79d22d82c5b16189481ec4047b605fb9c8
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-aug-me_95.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_1295.jpg
+22. Hash: 089a7ad8107e9ef50fc7c35e7407b18fcda170be3707749807a059a5cb46b3a8
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-aug-me_97.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_532.jpg
+23. Hash: 47659f0b7a3739148ba3a036ec2204283a0a233876b0a0458bf251bfae9c2da8
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-aug-me_98.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_1274.jpg
+24. Hash: 451f339dbf4d33864e0dd8940f533bbeddda6492cf60bb15615342bd467cc721
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_1094.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_219.jpg
+25. Hash: 09b9031e30e757eb6e648686f0ca412357e86895ebbc52d300d2d0a9305fd417
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_1101.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_836.jpg
+26. Hash: 24f09f91af40e42f2798bbc29df353ce17e6a0c0b533fb923b2fa8f75df6b496
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_339.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_534.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_86.jpg
+27. Hash: e2c7bc9c2d735e5b584b329f5cda1aec1f2415b2972c4aa8efc8d0a61e61b280
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_432.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_561.jpg
+28. Hash: 4951f7ba2e002020c835b3f50136c3249f3ae004624b35a262e65dd431d70e56
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_543.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_menin/Tr-me_726.jpg
+29. Hash: 31cdb53ccbc08d1ad8df78f53d70342bd63bbfb96c10c78b101c59ce35206ba1
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0013 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0013.jpg
+30. Hash: 8874bd8ea7e6a3034d154156b1464f4ab4d8510f75c0df39289b1faa56b03f69
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0014 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0014.jpg
+31. Hash: db09b0cd83e1908aad3f8e7ab29ec939d315f400c164a00e658102c1a23500ad
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0015 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0015.jpg
+32. Hash: 7c34ee6a688ac0ea1a804cca9e6d7e1c51ab694f4f0f6aac34ca2d2b7f68471c
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0016 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0016.jpg
+33. Hash: a15ed5db728331d970dab2ffb344a99ccd2cad95fa7693f2a951d23f1c79f209
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0017 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0017.jpg
+34. Hash: 16c8371f297f73ec90ffd4861d81dac33bcdb8a7b697a98f08b3094aaaa2e519
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0018 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0018.jpg
+35. Hash: 121bcb9349d49b92a71b862c0ba0ecc7365c041166ff497a334f492d9158b245
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0019 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0019.jpg
+36. Hash: 51f41fccae28cb334aeb1b5bb00a0aea0c885d9e3cfeb85844add4a06f5d4d4d
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0020 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0020.jpg
+37. Hash: 561e16c41364be070dbb4483abc232df6466d20a8bab4bc70d51658ac05c6b7c
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0021 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0021.jpg
+38. Hash: 2d7427191e326e8f75951af3fb73d397175f10da77d86c60c660d805c6045233
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0022 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0022.jpg
+39. Hash: 64eaaff67d86f419a9dc9b4038b14fa87ac8c10029a1a51e3688cf739b3bbbf9
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0023 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0023.jpg
+40. Hash: ebbdbb562f6f478d14ca6f455b1d5c14aba25a26c6cc1da67c8708b499992025
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0024 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0024.jpg
+41. Hash: 374149359b108a73d1350cdf629962b79de1d3d404c54cc567013abd0a3cfbdd
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0025 - Copy (2).jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0025 - Copy - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0025 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0025.jpg
+42. Hash: 518243de8c19a930b966f7341289b9927bcc285b522e7e8c3dc8d13a6d41407b
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0026 - Copy (2).jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0026 - Copy - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0026 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0026.jpg
+43. Hash: 183867aa61bedbafcbd76ecda92ff4fc2ba8b1a89fcdecc8ae0ef31ff22ed74c
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0027 - Copy (2).jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0027 - Copy - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0027 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0027.jpg
+44. Hash: fa1705d8d9827dd56151141fd156b56388cb54d3e8dc086d728e677850e35bdf
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0028 - Copy (2).jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0028 - Copy - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0028 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0028.jpg
+45. Hash: 6371a8abfc9c8587c189f9183f80eefec0d6f8a01774cbe5771603d5faec685d
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0029 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0029.jpg
+46. Hash: 9ee7ba6ec5685e4cb5182ec508e46f1a6e2e23ab835ee21581e3451ebe58c216
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0030 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0030.jpg
+47. Hash: e4edc6a25b8e7bc6f334a0bd7f48499c0f8e44b3a35619ac526dad0e32d839d2
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0031 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0031.jpg
+48. Hash: 0a64d9c1fae848c9d0b8e1dd2f6a58128138aedd20422daf7f612b2a20476d03
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0032 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0032.jpg
+49. Hash: 206cb8108021023d6d840ea272645932b7aad24e7eef7d15d1865ddfc1107f44
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0033 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0033.jpg
+50. Hash: 9a8885437900513e47c4ea328eaaebf93af6a4441f67ac621a43817a8f7f0b40
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0034 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0034.jpg
+51. Hash: e9a4a3366614da892f0ba7c3e6e3ddea1ff4ffc4dbe2726466755751f84adf1c
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0035 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0035.jpg
+52. Hash: 1b9295976ff55c92841a08ec02438d0bdd150f1b77617146b9fe57923cbc6a5a
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0036 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0036.jpg
+53. Hash: a1d59b1f6dcc609a1ac212a3f7780deffaa23c3c08a39c9ecc90d320017a1a68
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0037 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0037.jpg
+54. Hash: 0c4c95aff5e698d444a1621cb2832a68f3b5e37e7e5dc4b445e5b2183392c9cb
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0038 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0038.jpg
+55. Hash: 0f1a86e412c5b5f4c33967f7d0340671393e3647a13396bb3d0d0839cb64d5d4
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0039 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0039.jpg
+56. Hash: 408e6f6851c2deeece6ba8ca109679a226f118ff26c69c48883868559afb23b7
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0040 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0040.jpg
+57. Hash: e658b815433686e659658081f043efaec79cfb54f63c80ecd5b8984098ffaaa4
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0041 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0041.jpg
+58. Hash: 183234c9741462a6ac42a0d367c8c64e084d63d0c55c32a21644e5209b3902ec
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0042 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0042.jpg
+59. Hash: d640232e183e9b21fb637d6830a0d8625e2bcbaf2aa5769c17bbddde716d5d40
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0043 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0043.jpg
+60. Hash: d702c59f2d7b1d64a912aa9bdd4e956d9f1abfa997b79c37b9736316072e43b5
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0044 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0044.jpg
+61. Hash: c503a7346a6778877fd476ae341417d2f3c87103bde5a69e9a497bf4b510092f
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0045 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0045.jpg
+62. Hash: 7cee827a92ba9306b68ce16c01d7f4ed8b6402ec86c084a7417b9387dd22d92e
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0046 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0046.jpg
+63. Hash: ffdd4fcb4927ae3fc4268ae173973050e6837ab0c849ad34c7715d4f676fd6e5
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0047 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0047.jpg
+64. Hash: eea35712a55c811fead780a92b871417e05770012e4c0e71c1946172c84b75ec
+   Kept: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0048 - Copy.jpg
+   Removed: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/brain_tumor_2/brain_tumor/brain_tumor_0048.jpg

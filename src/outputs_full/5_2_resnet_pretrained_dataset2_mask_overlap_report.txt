@@ -1,0 +1,7 @@
+Grad-CAM mask overlap audit (full run)
+Mask files discovered: 0
+Te-gl_1.jpg | mask=NOT_FOUND
+Te-gl_10.jpg | mask=NOT_FOUND
+Te-gl_100.jpg | mask=NOT_FOUND
+Mean IoU: n/a (no matched masks)
+Mean Dice: n/a (no matched masks)

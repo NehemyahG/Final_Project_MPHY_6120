@@ -1,0 +1,7 @@
+Dataset root: /Users/ledianggara/Documents/AI/MPHY6120/Final_Project_MPHY_6120/Brain_Cancer raw MRI data/Brain_Cancer
+Subset fraction: 1.00
+Train samples: 4208
+Validation samples: 902
+Test samples: 902
+Classes: ['Glioma', 'Meningioma', 'Pituitary Tumor']
+Estimated unique numeric IDs from filenames: 2004
